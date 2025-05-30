@@ -34,16 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
       },
       { 
         emoji: '🙏', 
-        title: "Babe I'm SO sorry",
-        message: "I know I messed up, and I'm here to make it right...",
-
-        message: "I know I messed up, and I'm here to make it right And I promise to do better...",
+        title: "Please give me one more chance", 
+        message: "I promise to do better...",
         bgColor: '#f0f9ff'
       },
       { 
         emoji: '❤️', 
         title: "With All My Heart", 
-        message: `Mero jannn 🫶\nYou are my most precious gift I've ever received 🥺\nI know I may have made mistakes, and for that, I'm truly sorry.\nHurting you was never my intention, and it breaks my heart knowing I did.❤️🩹\n🌏 You mean the world to me, and every day, I'm reminded of how lucky I am\nto love someone like you my luv 💕\n\nI still can't believe I get to love someone so kind, so genuine,\nso completely incredible. And I'm sorry for any moment that made you\nfeel anything less than cherished 🥺\nSo babe I'm here with all my heart—saying I'm sorry, 💞\nand promising to love you better every day.`,
+        message: `Mero jannn 🫶\n\nYou are my most precious gift I've ever received 🥺\n\nI know I may have made mistakes, and for that, I'm truly sorry.\nHurting you was never my intention, and it breaks my heart knowing I did.❤️🩹\n\n🌏 You mean the world to me, and every day, I'm reminded of how lucky I am\nto love someone like you my luv 💕\n\nI still can't believe I get to love someone so kind, so genuine,\nso completely incredible. And I'm sorry for any moment that made you\nfeel anything less than cherished 🥺\n\nSo babe I'm here with all my heart—saying I'm sorry, 💞\nand promising to love you better every day.`,
         bgColor: '#ffebee'
       }
     ],
@@ -53,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
       types: ['heart', 'heart', 'heart', 'sparkle'],
       symbols: { heart: '♥', sparkle: '✧' },
       minSize: 1,
-      maxSize: 1.5,
+      maxSize: 2.5,
       minOpacity: 0.4,
       maxOpacity: 0.9,
       minDuration: 15,
