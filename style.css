@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Indie+Flower&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Indie Flower', cursive;
+  background-color: #fff5f5;
+  color: #ff6b8b;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  max-width: 80%;
+  z-index: 10;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.emoji {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+.message {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  animation: slideUp 1s ease-out;
+}
+
+.btn {
+  background-color: #ff8fab;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Indie Flower', cursive;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: pulse 2s infinite;
+}
+
+.btn:hover {
+  background-color: #ff6b8b;
+  transform: scale(1.05);
+}
+
+.btn-heart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Floating elements */
+.heart, .star, .sparkle {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.7;
+  animation: float linear infinite;
+}
+
+.heart {
+  color: #ff6b8b;
+  font-size: 1.5rem;
+}
+
+.star {
+  color: #ffd166;
+  font-size: 1.2rem;
+}
+
+.sparkle {
+  color: #a2d2ff;
+  font-size: 1rem;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Page transitions */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff5f5;
+  z-index: 1000;
+  animation: fadeOut 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+/* Example if using heart.png instead of emoji */
+.heart {
+  background: url('assets/heart.png');
+  width: 30px;
+  height: 30px;
+}
